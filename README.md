@@ -1,68 +1,89 @@
-# NeuroPlay – Videojuego Educativo para Niños con Asperger
+# NeuroPlay – Videojuego Educativo Móvil para Niños con Asperger
 
-NeuroPlay es un videojuego interactivo y educativo pensado para fortalecer la atención, la concentración y las habilidades sociales en niños de 6 a 12 años con características del Síndrome de Asperger. Buscamos brindar una experiencia lúdica, segura y adaptada a nivel sensorial, acompañada de una identidad visual clara y soporte técnico.
+**NeuroPlay** es una aplicación interactiva y educativa para dispositivos móviles, creada para reforzar la **atención**, la **concentración** y las **habilidades sociales** en niños de 6 a 12 años con características del **Síndrome de Asperger**. Buscamos unir tecnología y empatía, ofreciendo una experiencia de juego **sensorialmente amigable**, con una **identidad visual clara** y apoyo para familias y docentes.
 
-## Objetivos del Proyecto
+---
+
+## 🎯 Objetivos del Proyecto
+
 - Fortalecer la atención y la concentración mediante dinámicas de juego.
-- Ofrecer una herramienta inclusiva validada por especialistas.
-- Evitar la sobrecarga sensorial durante la experiencia de usuario.
+- Ofrecer una herramienta inclusiva, validada por especialistas.
+- Evitar la sobrecarga sensorial usando colores y sonidos suaves.
 - Facilitar la participación de padres y docentes como guías activos.
 
-## Componentes del Sistema
-### 1. Frontend Web (HTML + CSS + JS)
-- **Pantallas**
-  - **Inicio**: nombre del juego, selección de idioma y botones para iniciar, ver puntajes u opciones.
-  - **Juego**: encontrar el círculo verde con barra de tiempo, puntuación y niveles.
-  - **Resultados**: muestra el puntaje final y permite reiniciar o volver al menú.
-- **Interacción**
-  - Sistema de puntaje y niveles.
-  - Detección del objeto correcto (🟢) con retroalimentación visual.
-  - Almacenamiento del mejor puntaje en `localStorage`.
+---
 
-### 2. Backend (Node.js + Express + Consul)
-- Microservicio con los siguientes endpoints:
-  - `/health`: verificación de estado.
-  - `/`: información de los servicios registrados en Consul.
-- Registro dinámico del servicio con TTL, *health check* y eliminación automática en caso de falla.
+## 📱 Componentes del Sistema
 
-## Identidad Visual
-- **Logotipo**: ojo dentro de un joystick rodeado de íconos de logros, representando enfoque, juego y progreso.
-- **Paleta de Colores**
+### 1️⃣ Aplicación Móvil (Flutter)
+
+**Funcionalidades Clave**
+
+- Sistema de puntaje y niveles adaptativos.
+- Retroalimentación visual y sonora moderada.
+- Almacenamiento del mejor puntaje usando `SharedPreferences`.
+- Navegación fluida entre pantallas.
+
+---
+
+## 🎨 Identidad Visual
+
+- **Logotipo**: ojo dentro de un joystick rodeado de íconos de logros, simbolizando enfoque, juego y progreso.
+- **Colores**:
   - `#AEDFF7` – Calma y accesibilidad.
   - `#2C3E50` – Seguridad y confianza.
   - `#F0F3F5` – Neutralidad sensorial.
   - `#A2D5AB` – Progreso y armonía.
-- **Tipografía**
-  - Títulos: **Poppins** (moderna y clara).
-  - Estilo infantil/lúdico: **Comic Neue** o **Comic Sans**.
-- **Iconografía**: íconos redondeados y suaves, con símbolos de foco, tiempo y logros. Se emplean emojis (🟢 🔴 🔵 🟠) como estímulos visuales amigables.
+- **Tipografías**:
+  - Títulos: Poppins (moderna y clara).
+  - Textos lúdicos: Comic Neue o Comic Sans.
+- **Iconografía**: íconos redondeados, suaves, con símbolos de foco, tiempo y logros. Se usan emojis 🟢 🔴 🔵 🟠 como estímulos amigables.
 
-## Público Objetivo
-- **Primario**: niños y niñas de 6 a 12 años diagnosticados dentro del espectro autista, especialmente con características de Asperger.
-- **Secundario**: padres, madres, tutores, docentes, psicopedagogos y terapeutas que trabajan con población neurodivergente.
+---
 
-## Métricas de Éxito
+## 👥 Público Objetivo
+
+- **Principal**: niños y niñas de 6 a 12 años dentro del espectro autista, especialmente con características de Asperger.
+- **Secundario**: padres, madres, tutores, docentes, psicopedagogos y terapeutas.
+
+---
+
+## 📈 Métricas de Éxito
+
 - Número de sesiones activas semanales.
-- Tiempo promedio de atención.
+- Tiempo promedio de atención por sesión.
 - Número de usuarios recurrentes.
-- Calificación en tiendas.
-- Número de escuelas o instituciones usuarias.
+- Calificación en tiendas de apps.
+- Número de instituciones educativas que lo implementen.
 
-## Equipo del Proyecto
+---
+
+## 🧑‍💻 Equipo de Desarrollo
+
 - Daniel Ramírez
 - Edwin Chigne
 - Martín Kong
 - Jefferson Jacobo
 
-*"Donde enfocar la mente, se convierte en un juego." – NeuroPlay*
+> *"Donde enfocar la mente, se convierte en un juego." – NeuroPlay*
 
-## Cómo Empezar
-1. Clona este repositorio.
-2. Instala las dependencias con `flutter pub get`.
-3. Ejecuta la aplicación con `flutter run`.
+---
 
-## Contribución
-Las contribuciones son bienvenidas. Por favor abre un *issue* o envía un *pull request* para sugerencias y mejoras.
+## 🚀 Cómo Empezar
 
-## Licencia
-Este proyecto actualmente no tiene una licencia definida.
+1. Clona este repositorio:
+   ```bash
+   git clone [URL_DEL_REPOSITORIO]
+   
+2. Entra en la carpeta del proyecto:
+   ```bash
+   cd neuroplay
+   
+3. Instala las dependencias:
+   ```bash
+   flutter pub get
+   
+4. Ejecuta la aplicación:
+   ```bash
+   flutter run
+   
