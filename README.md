@@ -73,7 +73,7 @@
 
 1. Clona este repositorio:
    ```bash
-   git clone [URL_DEL_REPOSITORIO]
+   git clone https://github.com/tutorialazo/neuroplay.git
    
 2. Entra en la carpeta del proyecto:
    ```bash
