@@ -12,16 +12,39 @@ class Juego1Screen extends StatefulWidget {
 
 class _Juego1ScreenState extends State<Juego1Screen> {
   final Random _random = Random();
+
+  // Posición del círculo
   double _x = 100;
   double _y = 100;
+
+  // Puntaje
   int _score = 0;
+
+  // Timer para mover el círculo
   late Timer _timer;
+
+  // Lista de colores posibles
+  final List<Color> _colors = [
+    Colors.green,
+    Colors.red,
+    Colors.blue,
+    Colors.orange,
+    Colors.purple,
+    Colors.yellow,
+  ];
+
+  // Color fijo para toda la sesión
+  late Color _currentColor;
 
   @override
   void initState() {
     super.initState();
-    // Mover el círculo cada segundo
-    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+
+    // Elegir color aleatorio UNA VEZ al iniciar
+    _currentColor = _colors[_random.nextInt(_colors.length)];
+
+    // Mover el círculo cada 2 segundos
+    _timer = Timer.periodic(const Duration(milliseconds: 2800), (timer) {
       _moveTarget();
     });
   }
@@ -36,9 +59,9 @@ class _Juego1ScreenState extends State<Juego1Screen> {
     final screenSize = MediaQuery.of(context).size;
 
     setState(() {
-      // Nueva posición aleatoria dentro de la pantalla, dejando márgenes
+      // Solo cambiar posición
       _x = _random.nextDouble() * (screenSize.width - 100);
-      _y = _random.nextDouble() * (screenSize.height - 200); // restar AppBar y margen
+      _y = _random.nextDouble() * (screenSize.height - 200);
     });
   }
 
@@ -59,7 +82,7 @@ class _Juego1ScreenState extends State<Juego1Screen> {
       ),
       body: Stack(
         children: [
-          // Puntaje arriba
+          // Puntaje en la esquina superior
           Positioned(
             top: 20,
             left: 20,
@@ -71,7 +94,7 @@ class _Juego1ScreenState extends State<Juego1Screen> {
               ),
             ),
           ),
-          // Círculo verde movible
+          // Círculo movible con color FIJO
           Positioned(
             left: _x,
             top: _y,
@@ -80,8 +103,8 @@ class _Juego1ScreenState extends State<Juego1Screen> {
               child: Container(
                 width: 80,
                 height: 80,
-                decoration: const BoxDecoration(
-                  color: Colors.green,
+                decoration: BoxDecoration(
+                  color: _currentColor,
                   shape: BoxShape.circle,
                 ),
               ),
