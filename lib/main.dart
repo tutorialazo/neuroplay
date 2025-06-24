@@ -24,12 +24,15 @@ class NeuroplayApp extends StatelessWidget {
         '/home': (context) => const HomeScreen(),
 
         //Juegos
+        '/juego': (context) => const TimeScreen(),
+        '/loadinggame': (context) => const LoadingScreen(),
+
+        //Mini
+        '/mini': (context) => const MinigamesScreen(),
         '/juego1': (context) => const Juego1Screen(),
         '/juego2': (context) => const Juego2Screen(),
         '/juego3': (context) => const Juego3Screen(),
         '/juego4': (context) => const Juego4Screen(),
-        '/juego5': (context) => const Juego5Screen(),
-        '/juego6': (context) => const Juego6Screen(),
         
       },
     );

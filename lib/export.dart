@@ -1,7 +1,12 @@
 // THEMES
 export 'constants/theme.dart';
 
-//firebase
+//GAME
+export 'aplication/home_screen.dart';
+export 'aplication/time_screen.dart';
+export 'aplication/loading_screen.dart';
+
+
 //export 'firebase_options.dart';
 //export 'services/auth_service.dart';
 
@@ -10,8 +15,12 @@ export 'constants/theme.dart';
 export 'splash.dart';
 
 
-//APLICATION
-export 'aplication/home_screen.dart';
+
+//WIDGETS
+export 'widgets/web_view_screen.dart';
+
+
+export 'aplication/minigames_screen.dart';
 export 'aplication/1.dart';
 export 'aplication/2.dart';
 export 'aplication/3.dart';
